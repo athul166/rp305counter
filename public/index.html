@@ -97,7 +97,7 @@ footer{
 <script>
 	$(document).ready(function(){
 		$.ajax({
-			url: 'http://localhost:1100/count',
+			url: 'https://rp305counter.herokuapp.com/count',
 			success: function(data){
 				$("#cnt").text(data.count);
 			}
@@ -105,7 +105,7 @@ footer{
 		
 		$(".plus").on('click', function(){
 			$.ajax({
-				url: 'http://localhost:1100/inc',
+				url: 'https://rp305counter.herokuapp.com/inc',
 				success: function(data){
 					$("#cnt").text(data.count);
 				}
@@ -113,7 +113,7 @@ footer{
 		});
 		$(".minus").on('click', function(){
 			$.ajax({
-				url: 'http://localhost:1100/dec',
+				url: 'https://rp305counter.herokuapp.com/dec',
 				success: function(data){
 					$("#cnt").text(data.count);
 				}
