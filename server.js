@@ -28,6 +28,10 @@ app.get('/inc',(req,res)=>{
   --count;
   res.send({count: count});
 });
+app.get('/reset',(req,res)=>{
+  count=0;
+  res.send({count: count});
+});
 //App server ---------->
 server.listen(process.env.PORT || 1100, err => {
   if(err){
