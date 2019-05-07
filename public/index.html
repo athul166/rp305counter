@@ -119,6 +119,14 @@ footer{
 				}
 			})
 		});
+		$(".resetBtn").on('click', function(){
+			$.ajax({
+				url: 'https://rp305counter.herokuapp.com/reset',
+				success: function(data){
+					$("#cnt").text(data.count);
+				}
+			})
+		});
 	})
 </script>
 </head>
